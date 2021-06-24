@@ -1,0 +1,14 @@
+{
+	"name": "front-end-fun",
+	"version": "1.0.0",
+	"description": "css challenge",
+	"main": "index.js",
+	"scripts": {
+		"sass": "sass --watch sass:css"
+	},
+	"author": "Kivi Corn",
+	"license": "ISC",
+	"dependencies": {
+		"node-sass": "^6.0.0"
+	}
+}
