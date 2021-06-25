@@ -30,13 +30,14 @@ body {
   letter-spacing: 1.5px;
   font-size: 18px;
   border-radius: 10000px;
-  transition: background-color 0.2s, width 0.4s, height 0.4s;
+  transition: background-color 0.2s, width 0.3s, height 0.3s;
 }
 .finish_btn-pg .btn:hover {
   cursor: pointer;
+  background-color: #5d9971;
 }
 .finish_btn-pg svg {
-  fill: white;
+  fill: #67b380;
 }
 .finish_btn-pg .animate {
   width: 60px;
@@ -44,13 +45,18 @@ body {
   background-color: #67b380;
   animation-name: circle;
   animation-duration: 0.7s;
+  animation-fill-mode: forwards;
 }
 @keyframes circle {
-  0%, 60%, 80%, 100% {
+  60%, 80%, 100% {
     border: 1px solid transparent;
+    background-color: transparent;
   }
-  20%, 50%, 70%, 90% {
-    border: 1px solid red;
+  50%, 70%, 90% {
+    border: 1px solid white;
+  }
+  100% {
+    background-color: white;
   }
 }
 
