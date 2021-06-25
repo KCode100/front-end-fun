@@ -1,86 +1,86 @@
-body {
+.animal-face-pg {
 	background-color: rgb(240, 210, 154);
-}
-.head {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-.face {
-	position: relative;
-	background-color: rgba(224, 111, 111, 0.8);
-	border-radius: 50%;
-	height: 180px;
-	width: 180px;
-}
-.eye {
-	position: absolute;
-	top: 50%;
-	background-color: white;
-	border-radius: 50%;
-	width: 25px;
-	height: 25px;
-	transform: translateY(-50%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	.head {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.face {
+		position: relative;
+		background-color: rgba(224, 111, 111, 0.8);
+		border-radius: 50%;
+		height: 180px;
+		width: 180px;
+	}
+	.eye {
+		position: absolute;
+		top: 50%;
+		background-color: white;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-	&--left {
-		left: 25%;
+		&--left {
+			left: 25%;
+		}
+		&--right {
+			right: 25%;
+		}
 	}
-	&--right {
-		right: 25%;
+	.pupil {
+		background-color: black;
+		border-radius: 50%;
+		width: 5px;
+		height: 5px;
 	}
-}
-.pupil {
-	background-color: black;
-	border-radius: 50%;
-	width: 5px;
-	height: 5px;
-}
-.nose {
-	position: absolute;
-	top: 55%;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: pink;
-	width: 55px;
-	height: 45px;
-	border-radius: 50%;
-}
-.nostril {
-	position: absolute;
-	top: 20%;
-	background-color: rgba(224, 111, 111, 0.9);
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
+	.nose {
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: pink;
+		width: 55px;
+		height: 45px;
+		border-radius: 50%;
+	}
+	.nostril {
+		position: absolute;
+		top: 20%;
+		background-color: rgba(224, 111, 111, 0.9);
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
 
-	&--left {
-		left: 15%;
+		&--left {
+			left: 15%;
+		}
+		&--right {
+			right: 15%;
+		}
 	}
-	&--right {
-		right: 15%;
-	}
-}
 
-.ear {
-	position: absolute;
-	top: 0;
-	width: 0;
-	height: 0;
-	border-top: 45px solid transparent;
-	border-bottom: 45px solid transparent;
-	border-right: 45px solid pink;
-	z-index: -1;
+	.ear {
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+		border-top: 45px solid transparent;
+		border-bottom: 45px solid transparent;
+		border-right: 45px solid pink;
+		z-index: -1;
 
-	&--left {
-		left: -60px;
-		transform: rotate(65deg) translateY(-100px);
-	}
-	&--right {
-		right: -120px;
-		transform: rotate(108deg) translate(5px, 160px);
+		&--left {
+			left: -60px;
+			transform: rotate(65deg) translateY(-100px);
+		}
+		&--right {
+			right: -120px;
+			transform: rotate(108deg) translate(5px, 160px);
+		}
 	}
 }

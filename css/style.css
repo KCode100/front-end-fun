@@ -9,26 +9,68 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f0d29a;
+.finish_btn-pg {
+  background-color: #67b380;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.finish_btn-pg .btn {
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 220px;
+  height: 55px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  border-radius: 10000px;
+  transition: background-color 0.2s, width 0.4s, height 0.4s;
+}
+.finish_btn-pg .btn:hover {
+  cursor: pointer;
+}
+.finish_btn-pg svg {
+  fill: white;
+}
+.finish_btn-pg .animate {
+  width: 60px;
+  height: 60px;
+  background-color: #67b380;
+  animation-name: circle;
+  animation-duration: 0.7s;
+}
+@keyframes circle {
+  0%, 60%, 80%, 100% {
+    border: 1px solid transparent;
+  }
+  20%, 50%, 70%, 90% {
+    border: 1px solid red;
+  }
 }
 
-.head {
+.animal-face-pg {
+  background-color: #f0d29a;
+}
+.animal-face-pg .head {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.face {
+.animal-face-pg .face {
   position: relative;
   background-color: rgba(224, 111, 111, 0.8);
   border-radius: 50%;
   height: 180px;
   width: 180px;
 }
-
-.eye {
+.animal-face-pg .eye {
   position: absolute;
   top: 50%;
   background-color: white;
@@ -40,21 +82,19 @@ body {
   justify-content: center;
   align-items: center;
 }
-.eye--left {
+.animal-face-pg .eye--left {
   left: 25%;
 }
-.eye--right {
+.animal-face-pg .eye--right {
   right: 25%;
 }
-
-.pupil {
+.animal-face-pg .pupil {
   background-color: black;
   border-radius: 50%;
   width: 5px;
   height: 5px;
 }
-
-.nose {
+.animal-face-pg .nose {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -64,8 +104,7 @@ body {
   height: 45px;
   border-radius: 50%;
 }
-
-.nostril {
+.animal-face-pg .nostril {
   position: absolute;
   top: 20%;
   background-color: rgba(224, 111, 111, 0.9);
@@ -73,14 +112,13 @@ body {
   height: 15px;
   border-radius: 50%;
 }
-.nostril--left {
+.animal-face-pg .nostril--left {
   left: 15%;
 }
-.nostril--right {
+.animal-face-pg .nostril--right {
   right: 15%;
 }
-
-.ear {
+.animal-face-pg .ear {
   position: absolute;
   top: 0;
   width: 0;
@@ -90,11 +128,11 @@ body {
   border-right: 45px solid pink;
   z-index: -1;
 }
-.ear--left {
+.animal-face-pg .ear--left {
   left: -60px;
   transform: rotate(65deg) translateY(-100px);
 }
-.ear--right {
+.animal-face-pg .ear--right {
   right: -120px;
   transform: rotate(108deg) translate(5px, 160px);
 }
