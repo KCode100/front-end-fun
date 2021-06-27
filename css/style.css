@@ -279,7 +279,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation-delay: 0.8s;
+  animation-delay: 0.7s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;

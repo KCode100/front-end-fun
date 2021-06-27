@@ -4,7 +4,7 @@
 	"description": "css challenge",
 	"main": "index.js",
 	"scripts": {
-		"sass": "sass --watch sass:css"
+		"sass": "sass --watch src/sass:css"
 	},
 	"author": "Kivi Corn",
 	"license": "ISC",
