@@ -219,4 +219,79 @@ body {
   }
 }
 
+.navigation {
+  background-color: #4f6278;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+.navigation .nav {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  height: 30px;
+  width: 45px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.navigation .nav:hover {
+  cursor: pointer;
+}
+@keyframes open {
+  10% {
+    height: 30px;
+  }
+  30% {
+    height: 15px;
+    width: 45px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+  }
+  60% {
+    height: 75px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    width: 45px;
+  }
+  100% {
+    width: 600px;
+  }
+  100% {
+    height: 75px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+}
+@keyframes show-nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navigation .list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.navigation .list_item {
+  text-transform: uppercase;
+  padding: 25px;
+  animation-fill-mode: forwards;
+}
+.navigation .list_item a {
+  text-decoration: none;
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
