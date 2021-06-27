@@ -18,6 +18,8 @@
 		padding: 30px 30px 60px;
 		border-radius: 3px;
 		box-shadow: 3px 0 20px 0 rgba(0, 0, 0, 0.1);
+		animation-name: animate-in;
+		animation-duration: 0.5s;
 
 		.heading {
 			font-weight: 500;
@@ -52,9 +54,27 @@
 			border: none;
 			background-color: rgb(124, 189, 250);
 			color: white;
+			outline: none;
 
 			&:hover {
 				cursor: pointer;
+			}
+		}
+
+		@keyframes animate-in {
+			from {
+				opacity: 0;
+				transform: scale(0.6);
+			}
+			to {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+		@keyframes animate-out {
+			to {
+				opacity: 0;
+				transform: scale(1.1);
 			}
 		}
 	}

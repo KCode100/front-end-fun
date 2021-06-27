@@ -10,13 +10,56 @@
 	<body class="card-page">
 		<div class="card">
 			<div class="triangle"></div>
-			<span class="number">3</span>
-			<header class="heading">The Couch</header>
-			<p class="saying">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-				Dolorum, ipsam obcaecati!
-			</p>
+			<span class="number"></span>
+			<header class="heading"></header>
+			<p class="saying"></p>
 			<button class="btn">OK</button>
 		</div>
 	</body>
+	<script>
+		let cardNumber = 1;
+		const cardEl = document.querySelector('.card');
+		const headingEl = document.querySelector('.heading');
+		const sayingEl = document.querySelector('.saying');
+		const btnEl = document.querySelector('.btn');
+		const numberEl = document.querySelector('.number');
+		const content = [
+			{
+				title: 'First Card',
+				content: 'Easily add a card to any position in the JS object.',
+			},
+			{
+				title: 'Second Card',
+				content:
+					'To make this card animation, I used good old HTML, Sass, and vanilla JavaScript.',
+			},
+			{
+				title: 'Third Card',
+				content: 'I hope you enjoy it, and make good use of it too',
+			},
+			{
+				title: 'Another Card',
+				content:
+					'Blah blah blah blah blah blah blah blah blah blah blah',
+			},
+		];
+		btnEl.addEventListener('click', function () {
+			cardEl.style.animationName = 'animate-out';
+			setTimeout(function () {
+				cardEl.style.animationName = 'animate-in';
+				headingEl.textContent = content[cardNumber].title;
+				sayingEl.textContent = content[cardNumber].content;
+				cardNumber++;
+				numberEl.textContent = cardNumber;
+			}, 300);
+			if (cardNumber === content.length) {
+				cardNumber = 0;
+			}
+		});
+		window.addEventListener('load', function () {
+			headingEl.textContent = content[0].title;
+			sayingEl.textContent = content[0].content;
+			numberEl.textContent = cardNumber;
+		});
+	</script>
 </html>
