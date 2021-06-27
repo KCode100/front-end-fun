@@ -454,6 +454,47 @@ body {
   background-color: #d76a67;
   transform: translateY(100%);
   transition: all 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery main .bottom .title {
+  text-transform: capitalize;
+  color: white;
+  font-size: 20px;
+}
+.gallery main .bottom ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gallery main .bottom ul li {
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 20px;
+  height: 60px;
+  width: 60px;
+  transition: all 0.2s;
+}
+.gallery main .bottom ul li:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.gallery main .bottom ul li:hover a {
+  color: #d76a67;
+}
+.gallery main .bottom ul li a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
 }
 .gallery main .center-img {
   position: absolute;
