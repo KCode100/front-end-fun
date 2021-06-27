@@ -28,7 +28,7 @@
 
 			<div class="top"></div>
 			<div class="bottom">
-				<div class="title">kivi corn</div>
+				<div class="title"></div>
 				<div class="links">
 					<ul>
 						<li><a href="#">link</a></li>
@@ -62,14 +62,28 @@
 		const imgEl = document.querySelectorAll('.img');
 		const btnEl = document.querySelectorAll('.btn');
 		const exitEl = document.querySelector('.exit');
+		const titleEl = document.querySelector('.title');
 		const images = [
-			'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
-			'https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1276&q=80',
-			'https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
-			'https://images.unsplash.com/photo-1530031665520-57dab9ab1ec9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI0fHxmYW1pbHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
+			{
+				img: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
+				title: 'Kivi Corn',
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1276&q=80',
+				title: 'Donald Trump',
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
+				title: 'Joe Biden',
+			},
+			{
+				img: 'https://images.unsplash.com/photo-1530031665520-57dab9ab1ec9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI0fHxmYW1pbHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
+				title: 'Borris Johnson',
+			},
 		];
 		imgEl.forEach((img) => {
 			img.addEventListener('click', function () {
+				titleEl.textContent = images[this.id].title;
 				topEl.style.transitionDelay = '0';
 				bottomEl.style.transitionDelay = '0';
 				centerEl.style.transitionDelay = '.4s';
@@ -77,7 +91,9 @@
 
 				topEl.style.transform = 'translateY(0)';
 				bottomEl.style.transform = 'translateY(0)';
-				centerEl.style.backgroundImage = `url('${images[this.id]}')`;
+				centerEl.style.backgroundImage = `url('${
+					images[this.id].img
+				}')`;
 				centerEl.style.transform = 'translate(-50%, -50%)';
 				exitEl.style.transform = 'translateY(0)';
 			});
@@ -95,7 +111,7 @@
 
 		window.addEventListener('load', function () {
 			imgEl.forEach(function (img, i) {
-				img.style.backgroundImage = `url('${images[i]}`;
+				img.style.backgroundImage = `url('${images[i].img}`;
 			});
 		});
 	</script>
