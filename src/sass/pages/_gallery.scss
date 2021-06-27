@@ -47,9 +47,9 @@
 			border: 2px solid white;
 			height: 120px;
 			width: 120px;
-			transform: translate(-50%, -500px);
-			transition: all 0.7s ease-out;
-			transition-delay: 0.25s;
+			transform: translate(-50%, -480px);
+			transition: all 0.6s ease-out;
+			transition-delay: 0.3s;
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -68,11 +68,16 @@
 			height: 60px;
 			width: 60px;
 			transform: translateY(-300px);
-			transition: all 0.7s ease-out;
+			transition: transform 0.7s ease-out;
 			transition-delay: 0.3s;
 
 			&:hover {
 				cursor: pointer;
+				background-color: white;
+
+				svg {
+					fill: rgb(215, 106, 103);
+				}
 			}
 
 			& svg {

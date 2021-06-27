@@ -61,6 +61,11 @@
 		];
 		imgEl.forEach((img) => {
 			img.addEventListener('click', function () {
+				topEl.style.transitionDelay = '0';
+				bottomEl.style.transitionDelay = '0';
+				centerEl.style.transitionDelay = '.4s';
+				exitEl.style.transitionDelay = '.3s';
+
 				topEl.style.transform = 'translateY(0)';
 				bottomEl.style.transform = 'translateY(0)';
 				centerEl.style.backgroundImage = `url('${images[this.id]}')`;

@@ -463,9 +463,9 @@ body {
   border: 2px solid white;
   height: 120px;
   width: 120px;
-  transform: translate(-50%, -500px);
-  transition: all 0.7s ease-out;
-  transition-delay: 0.25s;
+  transform: translate(-50%, -480px);
+  transition: all 0.6s ease-out;
+  transition-delay: 0.3s;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -483,11 +483,15 @@ body {
   height: 60px;
   width: 60px;
   transform: translateY(-300px);
-  transition: all 0.7s ease-out;
+  transition: transform 0.7s ease-out;
   transition-delay: 0.3s;
 }
 .gallery main .exit:hover {
   cursor: pointer;
+  background-color: white;
+}
+.gallery main .exit:hover svg {
+  fill: #d76a67;
 }
 .gallery main .exit svg {
   fill: white;
