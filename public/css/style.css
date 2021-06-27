@@ -396,8 +396,8 @@ body {
 }
 .main ul li {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 200px;
-  width: 210px;
+  height: 150px;
+  width: 220px;
   border-bottom: 10px solid transparent;
 }
 .main ul li:hover {
@@ -413,6 +413,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   background-color: transparent;
+  transform: translateY(10px);
 }
 
 /*# sourceMappingURL=style.css.map */
