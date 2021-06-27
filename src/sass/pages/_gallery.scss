@@ -6,6 +6,7 @@
 	align-items: center;
 
 	main {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -14,6 +15,70 @@
 		margin: auto;
 		background-color: white;
 		padding: 5px;
+		overflow: hidden;
+
+		.top {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			background: url('https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1vdW50YWlufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60')
+				center/cover no-repeat;
+			transform: translateY(-100%);
+			transition: all 0.8s;
+		}
+		.bottom {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			background-color: rgb(215, 106, 103);
+			transform: translateY(100%);
+			transition: all 0.8s;
+		}
+
+		.center-img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			border: 2px solid white;
+			height: 120px;
+			width: 120px;
+			transform: translate(-50%, -500px);
+			transition: all 0.7s ease-out;
+			transition-delay: 0.25s;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.exit {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 10px;
+			right: 10px;
+			border-radius: 50%;
+			background-color: rgb(215, 106, 103);
+			font-size: 20px;
+			height: 60px;
+			width: 60px;
+			transform: translateY(-300px);
+			transition: all 0.7s ease-out;
+			transition-delay: 0.3s;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			& svg {
+				fill: white;
+			}
+		}
 	}
 
 	.row {
@@ -29,6 +94,9 @@
 			height: 300px;
 			width: 300px;
 			transition: all 0.7s;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
 
 			&:hover {
 				// filter: brightness(0.7);
@@ -53,24 +121,7 @@
 				height: 60px;
 				opacity: 0;
 				transform: scale(1.8);
-				transition: all 0.5s;
-			}
-
-			&--1 {
-				background: url('https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60')
-					center/cover no-repeat;
-			}
-			&--2 {
-				background: url('https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1276&q=80')
-					center/cover no-repeat;
-			}
-			&--3 {
-				background: url('https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60')
-					center/cover no-repeat;
-			}
-			&--4 {
-				background: url('https://images.unsplash.com/photo-1530031665520-57dab9ab1ec9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI0fHxmYW1pbHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60')
-					center/cover no-repeat;
+				transition: all 0.7s;
 			}
 		}
 	}

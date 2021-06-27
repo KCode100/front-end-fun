@@ -10,21 +10,79 @@
 	<body class="gallery">
 		<main>
 			<div class="row">
-				<div class="img img--1">
+				<div class="img" id="0">
 					<div class="btn">+</div>
 				</div>
-				<div class="img img--2">
+				<div class="img" id="1">
 					<div class="btn">+</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="img img--3">
+				<div class="img" id="2">
 					<div class="btn">+</div>
 				</div>
-				<div class="img img--4">
+				<div class="img" id="3">
 					<div class="btn">+</div>
 				</div>
 			</div>
+
+			<div class="top"></div>
+			<div class="bottom"></div>
+			<div class="center-img"></div>
+			<div class="exit">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 0 24 24"
+					width="24px"
+					fill="#000000"
+				>
+					<path d="M0 0h24v24H0V0z" fill="none" />
+					<path
+						d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+					/>
+				</svg>
+			</div>
 		</main>
 	</body>
+	<script>
+		const mainEl = document.querySelector('.main');
+		const topEl = document.querySelector('.top');
+		const bottomEl = document.querySelector('.bottom');
+		const centerEl = document.querySelector('.center-img');
+		const imgEl = document.querySelectorAll('.img');
+		const btnEl = document.querySelectorAll('.btn');
+		const exitEl = document.querySelector('.exit');
+		const images = [
+			'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60',
+			'https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1276&q=80',
+			'https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZhbWlseXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
+			'https://images.unsplash.com/photo-1530031665520-57dab9ab1ec9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTI0fHxmYW1pbHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60',
+		];
+		imgEl.forEach((img) => {
+			img.addEventListener('click', function () {
+				topEl.style.transform = 'translateY(0)';
+				bottomEl.style.transform = 'translateY(0)';
+				centerEl.style.backgroundImage = `url('${images[this.id]}')`;
+				centerEl.style.transform = 'translate(-50%, -50%)';
+				exitEl.style.transform = 'translateY(0)';
+			});
+		});
+
+		exitEl.addEventListener('click', function () {
+			topEl.style.transitionDelay = '.3s';
+			topEl.style.transform = 'translateY(-100%)';
+			bottomEl.style.transitionDelay = '.3s';
+			bottomEl.style.transform = 'translateY(100%)';
+			centerEl.style.transitionDelay = '.2s';
+			centerEl.style.transform = 'translate(-50%, -500px)';
+			exitEl.style.transform = 'translateY(-300px)';
+		});
+
+		window.addEventListener('load', function () {
+			imgEl.forEach(function (img, i) {
+				img.style.backgroundImage = `url('${images[i]}`;
+			});
+		});
+	</script>
 </html>
