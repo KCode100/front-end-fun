@@ -1,45 +1,110 @@
-.main {
-	max-width: 1000px;
-	margin: auto;
-	padding: 0 20px;
+body.home {
+	height: 100vh;
+	padding-bottom: 50px !important;
 
 	h1 {
 		text-align: center;
-		color: rgb(121, 0, 44);
+		margin: 0;
+		padding: 20px 10px;
 	}
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 20px;
+	section {
+		max-width: 1100px;
+		margin: 50px auto;
+		padding: 30px 0 50px;
+		border-radius: 8px;
 
-		li {
-			background-color: rgba(0, 0, 0, 0.7);
-			height: 150px;
-			width: 220px;
-			border-bottom: 10px solid transparent;
-
-			&:hover {
-				border-bottom: 10px solid rgb(196, 74, 121);
-			}
+		h1 {
+			font-family: serif;
+			font-size: 32px;
 		}
 
-		a {
+		nav {
+			margin: auto;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: white;
-			height: 100%;
-			width: 100%;
-			text-transform: uppercase;
-			text-decoration: none;
-			background-color: transparent;
-			transform: translateY(10px);
+			flex-wrap: wrap;
+			gap: 20px;
+
+			li {
+				height: 150px;
+				width: 220px;
+				border-bottom: 10px solid transparent;
+				transition: all 0.2s;
+			}
+
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 100%;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+
+		&.components {
+			background-color: rgba(213, 174, 86, 0.4);
+			h1 {
+				color: #4a171e;
+			}
+			li {
+				background-color: #4a171e;
+				&:hover {
+					border-bottom: 10px solid #d5ae56;
+				}
+			}
+
+			a {
+				color: #d5ae56;
+				transform: translateY(10px);
+			}
+		}
+
+		&.features {
+			background-color: #358597;
+			h1 {
+				color: white;
+			}
+			li {
+				background-color: transparent;
+				border: 8px solid #f4a896;
+				&:hover {
+					border: 8px solid white;
+				}
+			}
+
+			a {
+				color: white;
+			}
+		}
+
+		&.miscellaneous {
+			background-color: #f9d342;
+			h1 {
+				color: #292826;
+			}
+			li {
+				background-color: #292826;
+				border-bottom: 10px solid transparent;
+				&:hover {
+					border-bottom: 10px solid #4d4b48;
+				}
+			}
+
+			a {
+				color: #d5ae56;
+				transform: translateY(10px);
+			}
 		}
 	}
 }
