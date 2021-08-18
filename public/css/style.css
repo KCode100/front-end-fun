@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.7;
 }
 
@@ -379,24 +379,29 @@ body {
   background-color: #d9823b;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  scroll-padding-top: 20px;
+}
+
 body.home {
+  scroll-behavior: smooth;
   height: 100vh;
   padding-bottom: 50px !important;
 }
-body.home h1 {
+body.home section {
+  max-width: 1100px;
+  scroll-snap-align: start;
+  margin: 50px auto;
+  padding: 30px 0 50px;
+}
+body.home section h1 {
   text-align: center;
   margin: 0;
   padding: 20px 10px;
-}
-body.home section {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 30px 0 50px;
-  border-radius: 8px;
-}
-body.home section h1 {
-  font-family: serif;
-  font-size: 32px;
+  font-size: 42px;
+  font-family: "Playfair Display", serif;
 }
 body.home section nav {
   margin: auto;
@@ -412,6 +417,7 @@ body.home section ul {
   gap: 20px;
 }
 body.home section ul li {
+  border-radius: 4px;
   height: 150px;
   width: 220px;
   border-bottom: 10px solid transparent;
@@ -426,6 +432,8 @@ body.home section ul a {
   text-transform: uppercase;
   text-decoration: none;
   background-color: transparent;
+  text-align: center;
+  padding: 5px;
 }
 body.home section.components {
   background-color: rgba(213, 174, 86, 0.4);
@@ -667,6 +675,42 @@ body.home section.miscellaneous a {
   opacity: 0.9;
   border-radius: 50%;
   border: 2px solid orangered;
+}
+
+.unknown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+.unknown hr {
+  color: black;
+}
+.unknown .wm_container {
+  position: relative;
+  margin: auto;
+  overflow: auto;
+  scroll-snap-align: start;
+  border-radius: 4px;
+  margin: 20px;
+  max-width: 900px;
+  padding: 30px;
+  max-height: 600px;
+  background-color: #000036;
+  color: #e47900;
+}
+.unknown .wm_container h1 {
+  text-align: center;
+}
+.unknown .wm--vert {
+  text-transform: capitalize;
+  position: absolute;
+  writing-mode: vertical-rl;
+}
+.unknown p {
+  margin: 0;
+  padding-left: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

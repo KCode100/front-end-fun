@@ -1,0 +1,38 @@
+.unknown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(243, 243, 243);
+	hr {
+		color: black;
+	}
+	.wm {
+		&_container {
+			position: relative;
+			margin: auto;
+			overflow: auto;
+			scroll-snap-align: start;
+			border-radius: 4px;
+			margin: 20px;
+			max-width: 900px;
+			padding: 30px;
+			max-height: 600px;
+			background-color: rgb(0, 0, 54);
+			color: rgb(228, 121, 0);
+
+			h1 {
+				text-align: center;
+			}
+		}
+		&--vert {
+			text-transform: capitalize;
+			position: absolute;
+			writing-mode: vertical-rl;
+		}
+	}
+	& p {
+		margin: 0;
+		padding-left: 100px;
+	}
+}
